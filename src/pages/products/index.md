@@ -1,6 +1,9 @@
 ---
-templateKey: 'product-page'
-path: /products
+templateKey: product-page
+modalities:
+  - image: /img/products-grid2.jpg
+    description: This is the modality description
+    name: First modality
 title: Our Coffee
 image: /img/jumbotron.jpg
 heading: What we offer
@@ -99,3 +102,4 @@ pricing:
       plan: Custom
       price: '??'
 ---
+
