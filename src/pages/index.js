@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
+import hero from '../img/hero-background.jpg'
+
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
@@ -10,9 +12,11 @@ export default class IndexPage extends React.Component {
     return (
       <section className="section">
         <div className="container">
+          <img src={hero}/>
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
           </div>
+
           {posts
             .map(({ node: post }) => (
               <div

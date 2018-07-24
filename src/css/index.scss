@@ -1,0 +1,7 @@
+@import '~tachyons-sass/tachyons.scss';
+// @import '~tachyons-sass/scss/debug';
+@import 'all.sass';
+
+body {
+  @extend .avenir;
+}

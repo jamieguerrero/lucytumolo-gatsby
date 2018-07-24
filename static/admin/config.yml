@@ -29,11 +29,37 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/testimonial/index.md"
+        label: "Testimonial"
+        name: "testimonial"
+        fields:
+          - {label: Title, name: title, widget: string}
+      - file: "src/pages/modalities/index.md"
+        label: "Modalities"
+        name: "modalities"
+        fields:
+          - {label: Title, name: title, widget: string}
+      - file: "src/pages/gift/index.md"
+        label: "Gift"
+        name: "gift"
+        fields:
+          - {label: Title, name: title, widget: string}
+      - file: "src/pages/faq/index.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - {label: Title, name: title, widget: string}
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {label: Title, name: title, widget: string}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: Modalities, name: modalities, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Image, name: image, widget: image}, {label: Description, name: description, widget: text}]}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
