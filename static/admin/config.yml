@@ -14,6 +14,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "About Image", name: "aboutImage", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -34,12 +35,18 @@ collections:
         label: "Testimonial"
         name: "testimonial"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "heroImage", widget: "image"}
+          - {label: "Hero Testimonial", name: "heroTestimonial", widget: "markdown"}
+          - {label: "Testimonial Title", name: "testimonialTitle", widget: "string"}
+          - {label: "Testimonials", name: "testimonials", widget: "list", fields: [{label: "Testimonial Image", name: "testimonialImage", widget: "markdown"}]}
       - file: "src/pages/modalities/index.md"
         label: "Modalities"
         name: "modalities"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "heroImage", widget: "image"}
+          - {label: "Modalities", name: "modalities", widget: "markdown"}
       - file: "src/pages/gift/index.md"
         label: "Gift"
         name: "gift"
