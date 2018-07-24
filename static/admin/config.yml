@@ -29,8 +29,8 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Ossington Map", name: "ossingtonMap", widget: "object", fields: [{label: "Location", name: "location", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
-          - {label: "Dundas Map", name: "dundasMap", widget: "object", fields: [{label: "Location", name: "location", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
+          - {label: "Ossington", name: "ossington", widget: "object", fields: [{label: "Title", name: "label", widget:"string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "widget"}]}
+          - {label: "Dundas", name: "dundas", widget: "object", fields: [{label: "Title", name: "label", widget:"string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "widget"}]}
       - file: "src/pages/testimonial/index.md"
         label: "Testimonial"
         name: "testimonial"
@@ -51,17 +51,30 @@ collections:
         label: "Gift"
         name: "gift"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "heroImage", widget: "image"}
+          - {label: "Description", name: "description", widget: "markdown"}
       - file: "src/pages/faq/index.md"
         label: "FAQ"
         name: "faq"
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: "FAQs", name: "faqs", widget: list, field: [{label: "Question", name: "question", widget: "text"}, {label: "Answer", name: "answer", widget: "markdown"}]}
+          - {label: "FAQ Note", name:"faqNote", widget: "markdown"}
       - file: "src/pages/contact/index.md"
         label: "Contact"
         name: "contact"
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: "Ossington Map", name: "ossingtonMap", widget: "object", fields: [{label: "Location", name: "location", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
+          - {label: "Dundas Map", name: "dundasMap", widget: "object", fields: [{label: "Location", name: "location", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
+          - {label: "Contact Section", name: "contactSection", widget: "object", fields: [{label: "Title", name: "label", widget:"string"}, {label: "Image", name: "image", widget: image}, {label: "Description", name: "description", widget: "markdown"}]}
+      - file: "src/pages/resources/index.md"
+        label: "Resources"
+        name: "resources"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: "Resources", name: "resources", widget: list, field: [{label: "Resource", name: "resource", widget: "markdown"}]}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
