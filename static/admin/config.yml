@@ -32,8 +32,8 @@ collections:
           - {label: "Ossington", name: "ossington", widget: "object", fields: [{label: "Title", name: "label", widget: "string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "widget"}]}
           - {label: "Dundas", name: "dundas", widget: "object", fields: [{label: "Title", name: "label", widget: "string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "widget"}]}
       - file: "src/pages/testimonial/index.md"
-        label: "Testimonial"
-        name: "testimonial"
+        label: "Testimonials"
+        name: "testimonials"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial-page"}
           - {label: "Title", name: "title", widget: "string"}
