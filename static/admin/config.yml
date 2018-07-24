@@ -28,8 +28,8 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Ossington Map", name: "ossingtonMap", widget: "list", fields: [{label: "Location", name: "location", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
-          - {label: "Dundas Map", name: "dundasMap", widget: "list", fields: [{label: "Location", name: "location", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
+          - {label: "Ossington Map", name: "ossingtonMap", widget: "object", fields: [{label: "Location", name: "location", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
+          - {label: "Dundas Map", name: "dundasMap", widget: "object", fields: [{label: "Location", name: "location", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
       - file: "src/pages/testimonial/index.md"
         label: "Testimonial"
         name: "testimonial"
