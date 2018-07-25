@@ -1,5 +1,5 @@
 ---
 templateKey: 'testimonial-page'
-path: /testimonial
+path: /testimonials
 title: Testimonials
 ---
