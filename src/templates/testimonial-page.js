@@ -10,12 +10,16 @@ export const TestimonialPageTemplate = ({
   testimonials
 }) => (
   <section className="section section--gradient">
-    <div class="container">
-    {title}
-    {heroImage}
-    {heroTestimonial}
-    {testimonialTitle}
-    {testimonials}
+    <div className="container">
+      {title}
+      {heroImage}
+      {heroTestimonial}
+      {testimonialTitle}
+      {testimonials.map(({testimonial: testimonial}) => {
+        return (
+          testimonial
+        )
+      })}
     </div>
   </section>
 )
@@ -25,7 +29,7 @@ TestimonialPageTemplate.propTypes = {
   heroImage: PropTypes.string,
   heroTestimonial: PropTypes.string,
   testimonialTitle: PropTypes.string,
-  testimonials: PropTypes.string,
+  testimonials: PropTypes.array
 }
 
 const TestimonialPage = ({ data }) => {

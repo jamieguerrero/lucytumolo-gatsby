@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ProductPageTemplate } from '../../templates/product-page'
+import { GiftPageTemplate } from '../../templates/product-page'
 
 const GiftPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
@@ -16,7 +16,7 @@ const GiftPagePreview = ({ entry, getAsset }) => {
   const modalities = entryModalities ? entryModalities.toJS() : []
 
   return (
-    <ProductPageTemplate
+    <GiftPageTemplate
       modalities = {modalities}
       image={entry.getIn(['data', 'image'])}
       title={entry.getIn(['data', 'title'])}
