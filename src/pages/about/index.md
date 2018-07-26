@@ -1,19 +1,37 @@
 ---
-templateKey: 'about-page'
-path: /about
-title: About our values
+templateKey: about-page
+title: About
+ossington:
+  image: /img/chemex.jpg
+  label: Ossington
+  locationDescription: Ossington Description
+  mapLink: Ossington Map Link
+dundas:
+  image: /img/chemex.jpg
+  label: Dundas Title
+  locationDescription: Dundas Description
+  mapLink: Dundas Map LInk
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+Lucy graduated from ICT Kikkawa College and received her designation in 2008. Within those years, she had the privilege of working alongside very skilled practitioners ranging from Sports Medicine Doctors, Physiotherapists, Chiropractors, Osteopaths, Naturopathic Doctors, Traditional Chinese Doctors and Personal Trainers. This allowed her to treat a wide range of conditions such as: 
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+* repetitive strain injuries
+* tendonitis
+* depression 
+* anxiety
+* fibromyagia
+* general tension
+* acute and chronic condiions
+* pre and post natal
+* general pain management
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+Lucy is often described as a deep tissue therapist with a gentle approach to the body. She employs a number of massage techniques including: 
+* postural assessment
+* trigger point therapy 
+* deep tissue massage 
+* myofascial release
+* neuromuscular therapy 
+* rehabilitation
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+In addition, she recently received a certification in Ashiastu Massage which utilizes deep footed compression and effleurage strokes. Stay tuned for that!
+With a promise to do something positive for herself daily, Lucy finds herself being active in weightlifting, CrossFit, Yoga, Pilates, indoor rock climbing, adventure racing, hiking, is an avid traveler and incorporates healthy eating habits in her routine.
+Passionate about health care, Lucy’s goal is to help you improve your life physically, mentally and emotionally.
