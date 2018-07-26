@@ -3,48 +3,25 @@ import PropTypes from 'prop-types'
 import { ProductPageTemplate } from '../../templates/product-page'
 
 const ContactPagePreview = ({ entry, getAsset }) => {
-  const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
-  const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
-
-  const entryTestimonials = entry.getIn(['data', 'testimonials'])
-  const testimonials = entryTestimonials ? entryTestimonials.toJS() : []
-
-  const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans'])
-  const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
-
-  const entryModalities = entry.getIn(['data', 'modalities'])
-  const modalities = entryModalities ? entryModalities.toJS() : []
-
   return (
     <ProductPageTemplate
-      modalities = {modalities}
-      image={entry.getIn(['data', 'image'])}
       title={entry.getIn(['data', 'title'])}
-      heading={entry.getIn(['data', 'heading'])}
-      description={entry.getIn(['data', 'description'])}
-      intro={{ blurbs }}
-      main={{
-        heading: entry.getIn(['data', 'main', 'heading']),
-        description: entry.getIn(['data', 'main', 'description']),
-        image1: {
-          image: getAsset(entry.getIn(['data', 'main', 'image1', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image1', 'alt']),
-        },
-        image2: {
-          image: getAsset(entry.getIn(['data', 'main', 'image2', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image2', 'alt']),
-        },
-        image3: {
-          image: getAsset(entry.getIn(['data', 'main', 'image3', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image3', 'alt']),
-        },
+      ossingtonMap={{
+        address: entry.getIn(['data', 'ossingtonMap', 'address']),
+        mapLink: entry.getIn(['data', 'ossingtonMap', 'mapLink']),
+        schedule: entry.getIn(['data', 'ossingtonMap', 'schedule']),
+        notes: entry.getIn(['data', 'ossingtonMap', 'notes'])
       }}
-      fullImage={entry.getIn(['data', 'full_image'])}
-      testimonials={testimonials}
-      pricing={{
-        heading: entry.getIn(['data', 'pricing', 'heading']),
-        description: entry.getIn(['data', 'pricing', 'description']),
-        plans: pricingPlans,
+      dundasMap={{
+        address: entry.getIn(['data', 'dundasMap', 'address']),
+        mapLink: entry.getIn(['data', 'dundasMap', 'mapLink']),
+        schedule: entry.getIn(['data', 'dundasMap', 'schedule']),
+        notes: entry.getIn(['data', 'dundasMap', 'notes'])
+      }}
+      contactSection={{
+        description: entry.getIn(['data', 'contactSection', 'description']),
+        image: entry.getIn(['data', 'contactSection', 'image']),
+        label: entry.getIn(['data', 'contactSection', 'label'])
       }}
     />
   )
