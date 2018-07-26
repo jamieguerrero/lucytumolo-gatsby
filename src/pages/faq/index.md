@@ -6,6 +6,6 @@ faqs:
     question: Question 1
   - answer: Answer 2
     question: Question 2
-undefined: Test FAQs
+undefined: Test FAQ example
 ---
 
