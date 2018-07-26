@@ -14,5 +14,6 @@ dundasMap:
 contactSection:
   description: Test Contact Description
   image: /img/coffee-gear.png
+  title: Contact Title Test
 ---
 
