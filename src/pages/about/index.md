@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
 title: About
+aboutImage: /img/about-lucy.jpg
 ossington:
   image: /img/chemex.jpg
   label: Ossington
