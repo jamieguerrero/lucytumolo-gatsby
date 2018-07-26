@@ -2,7 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({
+  title,
+  aboutImage,
+  content,
+  contentComponent,
+  ossington,
+  dundas
+}) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -15,6 +22,15 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
                 {title}
               </h2>
               <PageContent className="content" content={content} />
+              <img src={aboutImage}/>
+              {ossington.image}
+              {ossington.label}
+              {ossington.locationDescription}
+              {ossington.mapLink}
+              {dundas.image}
+              {dundas.label}
+              {dundas.locationDescription}
+              {dundas.mapLink}
             </div>
           </div>
         </div>
@@ -25,8 +41,21 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
+  aboutImage: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  ossington: PropTypes.shape({
+    image: PropTypes.string,
+    label: PropTypes.string,
+    locationDescription: PropTypes.string,
+    mapLink: PropTypes.string
+  }),
+  dundas: PropTypes.shape({
+    image: PropTypes.string,
+    label: PropTypes.string,
+    locationDescription: PropTypes.string,
+    mapLink: PropTypes.string
+  })
 }
 
 const AboutPage = ({ data }) => {
@@ -36,7 +65,10 @@ const AboutPage = ({ data }) => {
     <AboutPageTemplate
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
+      aboutImage={post.frontmatter.aboutImage}
       content={post.html}
+      ossington={post.frontmatter.ossington}
+      dundas={post.frontmatter.dundas}
     />
   )
 }
@@ -53,6 +85,19 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        aboutImage
+        ossington {
+          image
+          label
+          locationDescription
+          mapLink
+        }
+        dundas {
+          image
+          label
+          locationDescription
+          mapLink
+        }
       }
     }
   }
