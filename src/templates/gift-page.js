@@ -6,21 +6,17 @@ import Pricing from '../components/Pricing'
 import Modalities from '../components/Modalities'
 
 export const GiftPageTemplate = ({
-  modalities,
-  image,
   title,
-  heading,
-  description,
-  intro,
-  main,
-  testimonials,
-  fullImage,
-  pricing,
+  heroImage,
+  description
 }) => (
   <section className="section section--gradient">
     <div className="container">
       <div className="section">
         <div className="columns">
+          {title}
+          {heroImage}
+          {description}
         </div>
       </div>
     </div>
@@ -28,28 +24,9 @@ export const GiftPageTemplate = ({
 )
 
 GiftPageTemplate.propTypes = {
-  modalities: PropTypes.array,
-  image: PropTypes.string,
   title: PropTypes.string,
-  heading: PropTypes.string,
+  heroImage: PropTypes.string,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.object,
-    image2: PropTypes.object,
-    image3: PropTypes.object,
-  }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.string,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
 }
 
 const GiftPage = ({ data }) => {
@@ -57,16 +34,9 @@ const GiftPage = ({ data }) => {
 
   return (
     <GiftPageTemplate
-      modalities={frontmatter.modalities}
-      image={frontmatter.image}
       title={frontmatter.title}
-      heading={frontmatter.heading}
+      heroImage={frontmatter.heroImage}
       description={frontmatter.description}
-      intro={frontmatter.intro}
-      main={frontmatter.main}
-      testimonials={frontmatter.testimonials}
-      fullImage={frontmatter.full_image}
-      pricing={frontmatter.pricing}
     />
   )
 }
@@ -86,48 +56,8 @@ export const giftPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image
-        heading
+        heroImage
         description
-        intro {
-          blurbs {
-            image
-            text
-          }
-          heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image
-          }
-          image2 {
-            alt
-            image
-          }
-          image3 {
-            alt
-            image
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
-        }
       }
     }
   }
