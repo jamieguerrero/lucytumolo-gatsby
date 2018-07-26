@@ -6,5 +6,6 @@ faqs:
     question: Question 1
   - answer: Answer 2
     question: Question 2
-faqNote: Test FAQ example 1
+faqNote: Test FAQ example 2
 ---
+
