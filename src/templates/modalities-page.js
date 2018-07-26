@@ -16,7 +16,7 @@ export const ModalitiesPageTemplate = ({
 ModalitiesPageTemplate.propTypes = {
   title: PropTypes.string,
   heroImage: PropTypes.string,
-  modalities: PropTypes.string,
+  modalities: PropTypes.string
 }
 
 const ModalitiesPage = ({ data }) => {

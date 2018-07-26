@@ -15,11 +15,7 @@ export const TestimonialPageTemplate = ({
       {heroImage}
       {heroTestimonial}
       {testimonialTitle}
-      {testimonials.map(({testimonial: testimonial}) => {
-        return (
-          testimonial
-        )
-      })}
+      <Testimonials testimonials={testimonials} />
     </div>
   </section>
 )
