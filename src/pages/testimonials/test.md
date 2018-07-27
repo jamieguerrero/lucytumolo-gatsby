@@ -3,4 +3,7 @@ templateKey: testimonial-post
 title: Test
 testimonialImage: /img/lucy-dog.jpg
 ---
-Testimonial 1
+Lucy has the rare combination of applying appropriate pressures with great fidelity in her treatments. One treatment and I was a convert. I see no other therapists, now.
+
+**Dave**\
+Toronto, ON
