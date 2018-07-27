@@ -4,13 +4,13 @@ import PropTypes from 'prop-types'
 export const ResourcePageTemplate = ({
   title,
   heroImage,
-  modalities
+  resources
 }) => (
   <section className="section section--gradient">
     <div className="container">
       {title}
       <img src={heroImage}/>
-      {modalities}
+      {resources}
     </div>
   </section>
 )
@@ -18,7 +18,7 @@ export const ResourcePageTemplate = ({
 ResourcePageTemplate.propTypes = {
   title: PropTypes.string,
   heroImage: PropTypes.string,
-  modalities: PropTypes.string
+  resources: PropTypes.string
 }
 
 const ResourcePage = ({ data }) => {
@@ -28,7 +28,7 @@ const ResourcePage = ({ data }) => {
     <ResourcePageTemplate
       title={frontmatter.title}
       heroImage={frontmatter.heroImage}
-      modalities={frontmatter.modalities}
+      resources={frontmatter.resources}
     />
   )
 }
@@ -49,7 +49,7 @@ export const modalitiesPageQuery = graphql`
       frontmatter {
         title
         heroImage
-        modalities
+        resources
       }
     }
   }
