@@ -1,6 +1,6 @@
 ---
 templateKey: testimonial-post
 title: Test 2
-testimonialImage: /img/about-lucy.jpg
+testimonialImage: /img/lucy-dog.jpg
 ---
 Test 2
