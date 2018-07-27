@@ -4,3 +4,6 @@ title: Test 2
 testimonialImage: /img/lucy-dog.jpg
 ---
 Test 2
+
+**Jamie Guerrero**\
+Toronto, ON
