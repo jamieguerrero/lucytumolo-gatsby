@@ -9,11 +9,11 @@ const Testimonials = ({
   <div>
     {testimonials.map(testimonial => {
       console.log(testimonial)
+      const { testimonialImage } = testimonial.frontmatter
       return (
         <article key={v4()} className="message">
           <div className="message-body">
-            <img src={testimonial.testimonialImage}/>
-            {testimonial.testimonial}
+            <img src={testimonialImage}/>
           </div>
         </article>)
     })}

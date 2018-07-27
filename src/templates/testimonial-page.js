@@ -4,11 +4,10 @@ import Content, { HTMLContent } from '../components/Content'
 import Testimonials from '../components/Testimonials'
 
 export const TestimonialPageTemplate = ({
-  contentComponent,
   title,
   heroImage,
-  heroTestimonial,
-  testimonialTitle,
+  content,
+  contentComponent,
   testimonials
 }) => {
   const PostContent = contentComponent || Content
@@ -16,42 +15,49 @@ export const TestimonialPageTemplate = ({
   return (
     <section className="section section--gradient">
       <div className="container">
-        <h1>{title}</h1>
+        {title}
         <img src={heroImage}/>
-        <PostContent content={heroTestimonial} />
-        {testimonialTitle}
+        <PostContent content={content} />
+        <Testimonials testimonials={testimonials}/>
       </div>
     </section>
   )
 }
 
 TestimonialPageTemplate.propTypes = {
-  contentComponent: PropTypes.func,
   title: PropTypes.string,
   heroImage: PropTypes.string,
-  testimonialTitle: PropTypes.string,
+  content: PropTypes.string.isRequired,
+  contentComponent: PropTypes.func,
   testimonials: PropTypes.array
 }
 
 const TestimonialPage = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark
+  const { edges: testimonial } = data.allMarkdownRemark
+  let testimonialpage = []
+  let testimonialposts = []
+  testimonial.map((t) => {
+    if (t.node.frontmatter.templateKey === 'testimonial-page') {
+      testimonialpage = t.node
+    } else {
+      testimonialposts.push(t.node)
+    }
+  })
   return (
     <TestimonialPageTemplate
-      content = {html}
+      title={testimonialpage.frontmatter.title}
+      heroImage={testimonialpage.frontmatter.heroImage}
+      content={testimonialpage.html}
       contentComponent={HTMLContent}
-      title={frontmatter.title}
-      heroImage={frontmatter.heroImage}
-      heroTestimonial={frontmatter.heroTestimonial}
-      testimonialTitle={frontmatter.testimonialTitle}
-      testimonials={frontmatter.testimonials}
+      testimonials={testimonialposts}
     />
   )
 }
 
 TestimonialPage.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array
     }),
   }),
 }
@@ -59,15 +65,28 @@ TestimonialPage.propTypes = {
 export default TestimonialPage
 
 export const testimonialPageQuery = graphql`
-  query TestimonialPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-        heroImage
-        heroTestimonial
-        testimonialTitle
-      }
+  query TestimonialPage {
+    allMarkdownRemark (
+       filter: {
+         frontmatter: {
+           templateKey: {
+             regex: "/testimonial-post|testimonial-page/"
+           }
+         }
+       }
+     ){
+       edges {
+         node {
+           id
+           frontmatter {
+             title
+             templateKey
+             testimonialImage
+             heroImage
+           }
+           html
+         }
+       }
+     }
     }
-  }
 `
