@@ -1,4 +1,0 @@
----
-templateKey: footer
-title: Footer
----

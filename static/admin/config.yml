@@ -36,14 +36,20 @@ collections:
         label: "Home"
         name: "home"
         fields:
-          - {label: "Template Key", name: "templateKey", widget:"hidden", default: "home-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: "Title", name: "title", widget: "string"}
-      - file: "src/pages/footer/index.md"
-        label: "Footer"
-        name: "footer"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget:"hidden", default: "footer"}
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Ossington Link", name: "ossingtonLink", widget: "string"}
+          - {label: "Dundas Link", name: "dundasLink", widget: "string"}
+          - {label: "Services Title", name: "servicesTitle", widget: "string"}
+          - {label: "Services Image", name: "servicesImage", widget: "image"}
+          - {label: "Services Description", name: "servicesDescription", widget: "markdown"}
+          - {label: "Modality 1", name: "modality1", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Image", name: "image", widget: "image"}, {label: "Description", name: "description", widget: "string"}]}
+          - {label: "Modality 2", name: "modality2", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Image", name: "image", widget: "image"}, {label: "Description", name: "description", widget: "string"}]}
+          - {label: "Modality 3", name: "modality3", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Image", name: "image", widget: "image"}, {label: "Description", name: "description", widget: "string"}]}
+          - {label: "Parallax Image", name: "parallaxImage", widget: "image"}
+          - {label: "Rates Title", name: "ratesTitle", widget: "string"}
+          - {label: "Rates Image", name: "ratesImage", widget: "image"}
+          - {label: "Rates Description", name: "ratesDescription", widget: "markdown"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
