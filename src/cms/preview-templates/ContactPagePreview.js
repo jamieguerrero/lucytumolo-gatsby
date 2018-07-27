@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ProductPageTemplate } from '../../templates/product-page'
+import { ContactPageTemplate } from '../../templates/contact-page'
 
 const ContactPagePreview = ({ entry, getAsset }) => {
   return (
-    <ProductPageTemplate
+    <ContactPageTemplate
       title={entry.getIn(['data', 'title'])}
       ossingtonMap={{
         address: entry.getIn(['data', 'ossingtonMap', 'address']),

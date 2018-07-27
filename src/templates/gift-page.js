@@ -13,13 +13,9 @@ export const GiftPageTemplate = ({
   return (
     <section className="section section--gradient">
       <div className="container">
-        <div className="section">
-          <div className="columns">
-            {title}
-            <img src={heroImage} alt=""/>
-            <PostContent content={content} />
-          </div>
-        </div>
+        {title}
+        <img src={heroImage} alt=""/>
+        <PostContent content={content} />
       </div>
     </section>
   )}

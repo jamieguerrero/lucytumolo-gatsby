@@ -7,16 +7,18 @@ export const FAQPageTemplate = ({
   faqNote
 }) => (
   <section className="section section--gradient">
-    {title}
-    {faqs.map((faq) => {
-      return (
-        <div>
-          {faq.question}
-          {faq.answer}
-        </div>
-      )
-    })}
-    {faqNote}
+    <div className="container">
+      {title}
+      {faqs.map((faq) => {
+        return (
+          <div>
+            {faq.question}
+            {faq.answer}
+          </div>
+        )
+      })}
+      {faqNote}
+    </div>
   </section>
 )
 

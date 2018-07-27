@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ModalitiesPageTemplate } from '../../templates/product-page'
+import { ModalitiesPageTemplate } from '../../templates/modalities-page'
 
 const ModalitiesPagePreview = ({ entry, getAsset }) => {
   return (

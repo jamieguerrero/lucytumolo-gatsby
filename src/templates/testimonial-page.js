@@ -20,7 +20,6 @@ export const TestimonialPageTemplate = ({
         <img src={heroImage}/>
         <PostContent content={heroTestimonial} />
         {testimonialTitle}
-        <Testimonials testimonials={testimonials} />
       </div>
     </section>
   )
@@ -30,15 +29,15 @@ TestimonialPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
   title: PropTypes.string,
   heroImage: PropTypes.string,
-  heroTestimonial: PropTypes.string,
   testimonialTitle: PropTypes.string,
   testimonials: PropTypes.array
 }
 
 const TestimonialPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter, html } = data.markdownRemark
   return (
     <TestimonialPageTemplate
+      content = {html}
       contentComponent={HTMLContent}
       title={frontmatter.title}
       heroImage={frontmatter.heroImage}

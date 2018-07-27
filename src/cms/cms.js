@@ -11,7 +11,6 @@ import TestimonialPagePreview from './preview-templates/TestimonialPagePreview'
 import TestimonialPreview from './preview-templates/TestimonialPreview'
 import ResourcesPreview from './preview-templates/ResourcesPreview'
 
-CMS.registerPreviewStyle('/styles.css')
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)

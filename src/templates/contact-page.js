@@ -8,18 +8,20 @@ export const ContactPageTemplate = ({
   contactSection
 }) => (
   <section className="section section--gradient">
-    {title}
-    {ossingtonMap.address}
-    {ossingtonMap.mapLink}
-    {ossingtonMap.schedule}
-    {ossingtonMap.notes}
-    {dundasMap.address}
-    {dundasMap.mapLink}
-    {dundasMap.schedule}
-    {dundasMap.notes}
-    {contactSection.title}
-    {contactSection.image}
-    {contactSection.description}
+    <div className="container">
+      {title}
+      {ossingtonMap.address}
+      {ossingtonMap.mapLink}
+      {ossingtonMap.schedule}
+      {ossingtonMap.notes}
+      {dundasMap.address}
+      {dundasMap.mapLink}
+      {dundasMap.schedule}
+      {dundasMap.notes}
+      {contactSection.title}
+      <img src={contactSection.image} alt=""/>
+      {contactSection.description}
+    </div>
   </section>
 )
 

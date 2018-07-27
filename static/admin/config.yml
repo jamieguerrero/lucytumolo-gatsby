@@ -42,14 +42,14 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Ossington", name: "ossington", widget: "object", fields: [{label: "Title", name: "label", widget: "string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "string"}]}
           - {label: "Dundas", name: "dundas", widget: "object", fields: [{label: "Title", name: "label", widget: "string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "string"}]}
-      - file: "src/pages/testimonialpage/index.md"
-        label: "Testimonial Page"
-        name: "testimonialpage"
+      - file: "src/pages/testimonials/index.md"
+        label: "Testimonials"
+        name: "testimonials"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Hero Image", name: "heroImage", widget: "image"}
-          - {label: "Hero Testimonial", name: "heroTestimonial", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Testimonial Title", name: "testimonialTitle", widget: "string"}
       - file: "src/pages/modalities/index.md"
         label: "Modalities"

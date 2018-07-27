@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { GiftPageTemplate } from '../../templates/product-page'
+import { GiftPageTemplate } from '../../templates/gift-page'
 
 const GiftPagePreview = ({ entry, getAsset }) => {
 

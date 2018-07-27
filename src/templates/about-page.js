@@ -21,8 +21,8 @@ export const AboutPageTemplate = ({
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <PageContent className="content" content={content} />
               <img src={aboutImage}/>
+              <PageContent className="content" content={content} />
               {ossington.image}
               {ossington.label}
               {ossington.locationDescription}
