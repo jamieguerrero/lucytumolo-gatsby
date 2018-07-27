@@ -1,1 +1,3 @@
+---
 templateKey: resources-page
+---
