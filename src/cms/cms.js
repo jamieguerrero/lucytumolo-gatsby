@@ -9,6 +9,7 @@ import GiftPagePreview from './preview-templates/GiftPagePreview'
 import ModalitiesPagePreview from './preview-templates/ModalitiesPagePreview'
 import TestimonialPagePreview from './preview-templates/TestimonialPagePreview'
 import TestimonialPreview from './preview-templates/TestimonialPreview'
+import ResourcesPreview from './preview-templates/ResourcesPreview'
 
 CMS.registerPreviewStyle('/styles.css')
 CMS.registerPreviewTemplate('about', AboutPagePreview)
@@ -20,3 +21,4 @@ CMS.registerPreviewTemplate('gift', GiftPagePreview)
 CMS.registerPreviewTemplate('modalities', ModalitiesPagePreview)
 CMS.registerPreviewTemplate('testimonialpage', TestimonialPagePreview)
 CMS.registerPreviewTemplate('testimonial', TestimonialPreview)
+CMS.registerPreviewTemplate('resources', ResourcesPreview)
