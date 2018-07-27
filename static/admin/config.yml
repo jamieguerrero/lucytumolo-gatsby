@@ -19,6 +19,16 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "src/pages/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Testimonial Image", name: "testimonialImage", widget: "image"}
+      - {label: "Testimonial", name: "testimonial", widget: "markdown"}
   - name: "pages"
     label: "Pages"
     files:
@@ -32,16 +42,15 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Ossington", name: "ossington", widget: "object", fields: [{label: "Title", name: "label", widget: "string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "string"}]}
           - {label: "Dundas", name: "dundas", widget: "object", fields: [{label: "Title", name: "label", widget: "string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "string"}]}
-      - file: "src/pages/testimonial/index.md"
-        label: "Testimonials"
-        name: "testimonials"
+      - file: "src/pages/testimonialpage/index.md"
+        label: "Testimonial Page"
+        name: "testimonialpage"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Hero Image", name: "heroImage", widget: "image"}
           - {label: "Hero Testimonial", name: "heroTestimonial", widget: "markdown"}
           - {label: "Testimonial Title", name: "testimonialTitle", widget: "string"}
-          - {label: "Testimonials", name: "testimonials", widget: "list", fields: [{label: "Testimonial Image", name: "testimonialImage", widget: "image"}, {label: "Testimonial", name: "testimonial", widget: "markdown"}]}
       - file: "src/pages/modalities/index.md"
         label: "Modalities"
         name: "modalities"

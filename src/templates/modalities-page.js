@@ -7,9 +7,11 @@ export const ModalitiesPageTemplate = ({
   modalities
 }) => (
   <section className="section section--gradient">
-    {title}
-    {heroImage}
-    {modalities}
+    <div className="container">
+      {title}
+      <img src={heroImage}/>
+      {modalities}
+    </div>
   </section>
 )
 

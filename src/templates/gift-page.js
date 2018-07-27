@@ -15,7 +15,7 @@ export const GiftPageTemplate = ({
       <div className="section">
         <div className="columns">
           {title}
-          {heroImage}
+          <img src={heroImage} alt=""/>
           {description}
         </div>
       </div>
