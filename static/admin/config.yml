@@ -28,7 +28,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Testimonial Image", name: "testimonialImage", widget: "image"}
-      - {label: "Testimonial", name: "testimonial", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
     files:
