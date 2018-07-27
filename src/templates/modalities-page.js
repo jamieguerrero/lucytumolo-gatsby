@@ -35,6 +35,7 @@ const ModalitiesPage = ({ data }) => {
       title={frontmatter.title}
       heroImage={frontmatter.heroImage}
       content={html}
+      contentComponent={HTMLContent}
     />
   )
 }

@@ -37,7 +37,6 @@ TestimonialPageTemplate.propTypes = {
 
 const TestimonialPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log(data)
   return (
     <TestimonialPageTemplate
       contentComponent={HTMLContent}
