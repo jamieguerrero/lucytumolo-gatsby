@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const ModalitiesPageTemplate = ({
+export const ResourcePageTemplate = ({
   title,
   heroImage,
   modalities
@@ -15,17 +15,17 @@ export const ModalitiesPageTemplate = ({
   </section>
 )
 
-ModalitiesPageTemplate.propTypes = {
+ResourcePageTemplate.propTypes = {
   title: PropTypes.string,
   heroImage: PropTypes.string,
   modalities: PropTypes.string
 }
 
-const ModalitiesPage = ({ data }) => {
+const ResourcePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <ModalitiesPageTemplate
+    <ResourcePageTemplate
       title={frontmatter.title}
       heroImage={frontmatter.heroImage}
       modalities={frontmatter.modalities}
@@ -33,7 +33,7 @@ const ModalitiesPage = ({ data }) => {
   )
 }
 
-ModalitiesPage.propTypes = {
+ResourcePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -41,10 +41,10 @@ ModalitiesPage.propTypes = {
   }),
 }
 
-export default ModalitiesPage
+export default ResourcePage
 
 export const modalitiesPageQuery = graphql`
-  query ModalitiesPage($id: String!) {
+  query ResourcePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

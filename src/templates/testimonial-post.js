@@ -54,16 +54,15 @@ TestimonialTemplate.propTypes = {
 }
 
 const Testimonial = ({ data }) => {
-  const { markdownRemark: post } = data
-  console.log(data)
+  const { markdownRemark: testimonial } = data
   return (
     <TestimonialTemplate
-      content={post.html}
+      content={testimonial.html}
       contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
-      tags={post.frontmatter.tags}
-      title={post.frontmatter.title}
+      description={testimonial.frontmatter.description}
+      helmet={<Helmet title={`${testimonial.frontmatter.title} | Blog`} />}
+      tags={testimonial.frontmatter.tags}
+      title={testimonial.frontmatter.title}
     />
   )
 }

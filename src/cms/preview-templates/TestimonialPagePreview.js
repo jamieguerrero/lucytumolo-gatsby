@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ProductPageTemplate } from '../../templates/product-page'
+import { TestimonialPageTemplate } from '../../templates/testimonial-page'
 
 const TestimonialPagePreview = ({ entry, getAsset }) => {
   const entryTestimonials = entry.getIn(['data', 'testimonials'])
   const testimonials = entryTestimonials ? entryTestimonials.toJS() : []
 
   return (
-    <ProductPageTemplate
+    <TestimonialPageTemplate
       title={entry.getIn(['data', 'title'])}
       heroImage={entry.getIn(['data', 'heroImage'])}
       heroTestimonial={entry.getIn(['data', 'heroTestimonial'])}

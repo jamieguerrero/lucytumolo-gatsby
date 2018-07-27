@@ -14,15 +14,16 @@ export const TestimonialPageTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-  <section className="section section--gradient">
-    <div className="container">
-      <h1>{title}</h1>
-      <img src={heroImage}/>
-      <PostContent content={heroTestimonial} />
-      {testimonialTitle}
-      <Testimonials testimonials={testimonials} />
-    </div>
-  </section>)
+    <section className="section section--gradient">
+      <div className="container">
+        <h1>{title}</h1>
+        <img src={heroImage}/>
+        <PostContent content={heroTestimonial} />
+        {testimonialTitle}
+        <Testimonials testimonials={testimonials} />
+      </div>
+    </section>
+  )
 }
 
 TestimonialPageTemplate.propTypes = {
@@ -68,10 +69,6 @@ export const testimonialPageQuery = graphql`
         heroImage
         heroTestimonial
         testimonialTitle
-        testimonials {
-          testimonialImage
-          testimonial
-        }
       }
     }
   }

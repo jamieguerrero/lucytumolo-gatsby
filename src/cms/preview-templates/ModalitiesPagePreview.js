@@ -5,9 +5,9 @@ import { ModalitiesPageTemplate } from '../../templates/product-page'
 const ModalitiesPagePreview = ({ entry, getAsset }) => {
   return (
     <ModalitiesPageTemplate
+      content={widgetFor('body')}
       title={entry.getIn(['data', 'title'])}
       heroImage={entry.getIn(['data', 'heroImage'])}
-      modalities={entry.getIn(['data', 'modalities'])}
     />
   )
 }
