@@ -1,5 +1,6 @@
 import CMS from 'netlify-cms'
 
+import HomePagePreview from './preview-templates/HomePagePreview'
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ContactPagePreview from './preview-templates/ContactPagePreview'
@@ -10,6 +11,7 @@ import TestimonialPagePreview from './preview-templates/TestimonialPagePreview'
 import TestimonialPreview from './preview-templates/TestimonialPreview'
 import ResourcesPreview from './preview-templates/ResourcesPreview'
 
+CMS.registerPreviewTemplate('home', HomePagePreview)
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
 CMS.registerPreviewTemplate('contact', ContactPagePreview)
