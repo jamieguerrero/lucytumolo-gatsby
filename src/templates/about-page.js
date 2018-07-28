@@ -26,6 +26,26 @@ export const AboutPageTemplate = ({
               {ossington.image}
               {ossington.label}
               {ossington.locationDescription}
+              <iframe
+                width="50%"
+                height="225"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=4%20macklem&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0">
+              </iframe>
+              <iframe
+                width="50%"
+                height="225"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=64%20ossington&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0">
+              </iframe>
               {ossington.mapLink}
               {dundas.image}
               {dundas.label}

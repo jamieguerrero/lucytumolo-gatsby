@@ -70,12 +70,6 @@ const HomePage = ({ data }) => {
 
   return (
     <HomePageTemplate
-      contentComponent={HTMLContent}
-      title={post.frontmatter.title}
-      aboutImage={post.frontmatter.aboutImage}
-      content={post.html}
-      ossington={post.frontmatter.ossington}
-      dundas={post.frontmatter.dundas}
     />
   )
 }

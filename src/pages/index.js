@@ -4,6 +4,8 @@ import Link from 'gatsby-link'
 
 import hero from '../img/hero-background.jpg'
 
+import HomePage from '../templates/home-page'
+
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props

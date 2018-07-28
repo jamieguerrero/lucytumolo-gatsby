@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import '../css/index.scss'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div className="avenir">
     <Helmet title="Lucy Tumolo | Registered Massage Therapist" />
     <Navbar />
     <div>{children()}</div>
