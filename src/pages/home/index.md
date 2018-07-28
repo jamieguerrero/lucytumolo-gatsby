@@ -1,4 +1,5 @@
 ---
+templateKey: home-page
 title: Home
 ossingtonLink: 'https://www.schedulicity.com/scheduling/LHL7CR'
 dundasLink: 'https://www.schedulicity.com/scheduling/LTRU7D'
@@ -8,7 +9,7 @@ servicesDescription: >-
   There's no denying the power of bodywork. Regardless of the objectives, we
   assign to it or the reasons we seek it out whether a luxurious treat, stress
   relief or pain management, massage therapy can be a powerful ally in your
-  healthcare regimen. 
+  healthcare regimen.
 
 
 
@@ -36,7 +37,7 @@ parallaxImage: /img/parallax-image.jpg
 ratesTitle: Rates
 ratesImage: /img/rates-image.jpg
 ratesDescription: >-
-  BOOK YOUR APPOINTMENT ONLINE 
+  BOOK YOUR APPOINTMENT ONLINE
 
 
 
@@ -47,4 +48,3 @@ ratesDescription: >-
 
   I accept cash and all credit cards.
 ---
-

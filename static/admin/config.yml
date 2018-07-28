@@ -32,7 +32,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/index.js"
+      - file: "src/pages/home/index.md"
         label: "Home"
         name: "home"
         fields:
