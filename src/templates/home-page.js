@@ -4,36 +4,43 @@ import Content, { HTMLContent } from '../components/Content'
 
 export const HomePageTemplate = ({
   title,
-  aboutImage,
-  content,
-  contentComponent,
-  ossington,
-  dundas
+  templateKey,
+  ossingtonLink,
+  dundasLink,
+  servicesTitle,
+  servicesImage,
+  servicesDescription,
+  modality1,
+  modality2,
+  modality3,
+  parallaxImage,
+  ratesTitle,
+  ratesImage,
+  ratesDescription,
 }) => {
-  const PageContent = contentComponent || Content
-
   return (
     <section className="section section--gradient">
       <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <img src={aboutImage}/>
-              <PageContent className="content" content={content} />
-              {ossington.image}
-              {ossington.label}
-              {ossington.locationDescription}
-              {ossington.mapLink}
-              {dundas.image}
-              {dundas.label}
-              {dundas.locationDescription}
-              {dundas.mapLink}
-            </div>
-          </div>
-        </div>
+        {title}
+        {templateKey}
+        {ossingtonLink}
+        {dundasLink}
+        {servicesTitle}
+        {servicesImage}
+        {servicesDescription}
+        {modality1.description}
+        {modality1.image}
+        {modality1.title}
+        {modality2.description}
+        {modality2.image}
+        {modality2.title}
+        {modality3.description}
+        {modality3.image}
+        {modality3.title}
+        {parallaxImage}
+        {ratesTitle}
+        {ratesImage}
+        {ratesDescription}
       </div>
     </section>
   )
@@ -80,25 +87,41 @@ HomePage.propTypes = {
 export default HomePage
 
 export const aboutPageQuery = graphql`
-  query HomePage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-        aboutImage
-        ossington {
-          image
-          label
-          locationDescription
-          mapLink
-        }
-        dundas {
-          image
-          label
-          locationDescription
-          mapLink
+query HomeQuery {
+  allMarkdownRemark(filter: {frontmatter: {templateKey: {regex: "/home-page/"}}}) {
+    edges {
+      node {
+        id
+        frontmatter{
+          title
+          templateKey
+          ossingtonLink
+          dundasLink
+          servicesTitle
+          servicesImage
+          servicesDescription
+          modality1 {
+            description
+            image
+            title
+          }
+          modality2 {
+            description
+            image
+            title
+          }
+          modality3 {
+            description
+            image
+            title
+          }
+          parallaxImage
+          ratesTitle
+          ratesImage
+          ratesDescription
         }
       }
     }
   }
+}
 `
