@@ -1,8 +1,8 @@
 ---
 templateKey: home-page
 title: Home
-ossingtonLink: 'https://www.schedulicity.com/scheduling/LHL7CR'
-dundasLink: 'https://www.schedulicity.com/scheduling/LTRU7D'
+ossingtonLink: 'https://lucyrmt.janeapp.com/locations/ossington'
+dundasLink: 'https://lucyrmt.janeapp.com/locations/dundas-and-dufferin'
 servicesTitle: Services
 servicesImage: /img/service-image.jpg
 servicesDescription: >-
@@ -48,3 +48,4 @@ ratesDescription: >-
 
   I accept cash and all credit cards.
 ---
+
