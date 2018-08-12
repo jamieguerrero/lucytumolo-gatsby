@@ -37,9 +37,30 @@ parallaxImage: /img/parallax-image.jpg
 ratesTitle: Rates
 ratesImage: /img/rates-image.jpg
 ratesDescription: >-
+  * 30 minute
+
+  * $65
+
+  * 45 minute
+
+  * $80
+
+  * 60 minute
+
+  * $100
+
+  * 75 minute
+
+  * $125
+
+  * 90 minute
+
+  * $140
+
+
+
+
   BOOK YOUR APPOINTMENT ONLINE
-
-
 
 
   \* All prices include HST. Complimentary Aroma Therapy is offered for any
