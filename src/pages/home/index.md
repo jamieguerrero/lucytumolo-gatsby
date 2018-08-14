@@ -58,9 +58,7 @@ ratesDescription: >-
   * $140
 
 
-
-
-  BOOK YOUR APPOINTMENT ONLINE
+  **BOOK YOUR APPOINTMENT ONLINE**
 
 
   \* All prices include HST. Complimentary Aroma Therapy is offered for any
