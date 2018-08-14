@@ -11,30 +11,73 @@ export default class IndexPage extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     const home = posts[0].node.frontmatter
-    console.log(home)
+    const parallaxImage = home.parallaxImage
+    console.log(parallaxImage)
     return (
-      <section className="section">
+      <div>
         <div className="container">
-        <a href={home.ossingtonLink}>Ossington</a>
-        <a href={home.dundasLink}>Dundas/Dufferin</a>
-        {home.servicesTitle}
-        <img src={home.servicesImage} alt=""/>
-        {home.servicesDescription}
-        {home.modality1.description}
-        <img src={home.modality1.image} alt=""/>
-        {home.modality1.title}
-        {home.modality2.description}
-        <img src={home.modality2.image} alt=""/>
-        {home.modality2.title}
-        {home.modality3.description}
-        <img src={home.modality3.image} alt=""/>
-        {home.modality3.title}
-        <img src={home.parallaxImage} alt=""/>
-        {home.ratesTitle}
-        <img src={home.ratesImage} alt=""/>
-        {home.ratesDescription}
+          <section className="hero-wrapper">
+            <a href={home.ossingtonLink}>Ossington</a>
+            <a href={home.dundasLink}>Dundas/Dufferin</a>
+            // TODO: Create hero image field
+          </section>
+          <section className="services-wrapper">
+            <div className="text-on-image service-image">
+              <img src={home.servicesImage} alt=""/>
+              <h2 className="image-title">{home.servicesTitle}</h2>
+            </div>
+            <div className="service-description">
+              {home.servicesDescription}
+              // TODO: make services description last sentence its own accent sentence field
+            </div>
+            <div className="modalities">
+              <div className="modality">
+                <div className="text-on-image">
+                  <img src={home.modality1.image} alt=""/>
+                  <h3 className="image-title">{home.modality1.title}</h3>
+                </div>
+                <div className="modality-description">
+                  {home.modality1.description}
+                </div>
+              </div>
+              <div className="modality">
+                <div className="text-on-image">
+                  <img src={home.modality2.image} alt=""/>
+                  <h3 className="image-title">{home.modality2.title}</h3>
+                </div>
+                <div className="modality-description">
+                  {home.modality2.description}
+                </div>
+              </div>
+              <div className="modality">
+                <div className="text-on-image">
+                  <img src={home.modality3.image} alt=""/>
+                  <h3 className="image-title">{home.modality3.title}</h3>
+                </div>
+                <div className="modality-description">
+                  {home.modality3.description}
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="parallax-wrapper"></section>
+          <section className="rates-wrapper">
+            <div className="rates-description">
+              {home.ratesDescription}
+              // TODO: make rates into repeatable fields
+            </div>
+            <div className="text-on-image rates-image">
+              <img src={home.ratesImage} alt=""/>
+              <h2 className="image-title">{home.ratesTitle}</h2>
+            </div>
+            <div className="rates-description mobile">
+              {home.ratesDescription}
+              // TODO: make rates into repeatable fields
+            </div>
+          </section>
         </div>
-      </section>
+        <div className="parallax-image" style={{backgroundImage: `url(${home.parallaxImage})`}}></div>
+      </div>
     )
   }
 }

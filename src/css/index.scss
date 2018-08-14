@@ -1,7 +1,14 @@
+@import '~bulma/bulma';
 @import '~tachyons-sass/tachyons.scss';
-// @import '~tachyons-sass/scss/debug';
-@import 'all.sass';
+@import '~jeet/scss/index';
 
-body {
-  @extend .avenir;
-}
+@import 'components/variables.scss';
+@import 'components/global.scss';
+@import 'components/navbar.scss';
+@import 'components/footer.scss';
+@import 'components/text-on-image.scss';
+@import 'pages/home';
+
+//Uncomment to show Jeet grid!
+@include debug;
+// @import 'debug.scss'

@@ -1,0 +1,28 @@
+footer {
+  text-align: center;
+  background-color: white;
+  padding: $mobile-section-padding 0;
+  position: relative;
+
+  .footer-locations {
+
+  }
+
+  .social-icons {
+    position: relative;
+    width: 100%;
+
+    .social-inner{
+      @include column(1/3);
+      @include align(horizontal);
+
+      a img{
+        @include column(1/6, 0, 0);
+      }
+    }
+  }
+
+  .footer-logo {
+    @include column(1);
+  }
+}

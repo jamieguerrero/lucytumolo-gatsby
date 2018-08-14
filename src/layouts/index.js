@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import '../css/index.scss'
 
 const TemplateWrapper = ({ children }) => (
@@ -10,6 +11,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet title="Lucy Tumolo | Registered Massage Therapist" />
     <Navbar />
     <div>{children()}</div>
+    <Footer />
   </div>
 )
 

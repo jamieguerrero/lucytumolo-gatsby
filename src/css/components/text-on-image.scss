@@ -1,0 +1,18 @@
+.text-on-image {
+  position: relative;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  .image-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+    color: white;
+    text-transform: uppercase;
+  }
+}
