@@ -13,7 +13,7 @@ dundas:
   locationDescription: Dundas Description
   mapLink: Dundas Map LInk
 ---
-Lucy graduated from ICT Kikkawa College and received her designation in 2008. Within those years, she had the privilege of working alongside very skilled practitioners ranging from Sports Medicine Doctors, Physiotherapists, Chiropractors, Osteopaths, Naturopathic Doctors, Traditional Chinese Doctors and Personal Trainers. This allowed her to treat a wide range of conditions such as: 
+Lucy graduated from ICT Kikkawa College and received her designation in 2008. Within those years, she had the privilege of working alongside very skilled practitioners ranging from Sports Medicine Doctors, Physiotherapists, Chiropractors, Osteopaths, Naturopathic Doctors, Traditional Chinese Doctors and Personal Trainers. This allowed her to treat a wide range of conditions such as : 
 
 * repetitive strain injuries
 * tendonitis
@@ -26,6 +26,7 @@ Lucy graduated from ICT Kikkawa College and received her designation in 2008. Wi
 * general pain management
 
 Lucy is often described as a deep tissue therapist with a gentle approach to the body. She employs a number of massage techniques including: 
+
 * postural assessment
 * trigger point therapy 
 * deep tissue massage 
