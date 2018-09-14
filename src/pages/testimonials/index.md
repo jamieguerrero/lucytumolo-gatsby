@@ -1,8 +1,7 @@
 ---
 templateKey: testimonial-page
-title: Testimonials
-heroImage: /img/good-vibes.jpg
-testimonialTitle: More Testimonials
+title: Atsuko Kitayama
+testimonialImage: /img/lucy-dog.jpg
 ---
 It was like love at first site. Once getting Lucy's massage, that's it! No one
 else out there. I've been her client for more than 5 years. Lucy is a first
