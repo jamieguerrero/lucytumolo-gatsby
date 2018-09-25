@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Navbar from '../components/Navbar'
 
 export const ContactPageTemplate = ({
   title,
@@ -7,22 +8,25 @@ export const ContactPageTemplate = ({
   dundasMap,
   contactSection
 }) => (
-  <section className="section section--gradient">
-    <div className="container">
-      {title}
-      {ossingtonMap.address}
-      {ossingtonMap.mapLink}
-      {ossingtonMap.schedule}
-      {ossingtonMap.notes}
-      {dundasMap.address}
-      {dundasMap.mapLink}
-      {dundasMap.schedule}
-      {dundasMap.notes}
-      {contactSection.title}
-      <img src={contactSection.image} alt=""/>
-      {contactSection.description}
-    </div>
-  </section>
+  <div>
+    <Navbar />
+    <section className="section section--gradient">
+      <div className="container">
+        {title}
+        {ossingtonMap.address}
+        {ossingtonMap.mapLink}
+        {ossingtonMap.schedule}
+        {ossingtonMap.notes}
+        {dundasMap.address}
+        {dundasMap.mapLink}
+        {dundasMap.schedule}
+        {dundasMap.notes}
+        {contactSection.title}
+        <img src={contactSection.image} alt=""/>
+        {contactSection.description}
+      </div>
+    </section>
+  </div>
 )
 
 ContactPageTemplate.propTypes = {

@@ -13,16 +13,12 @@ footer {
     width: 100%;
 
     .social-inner{
-      @include column(1/3);
-      @include align(horizontal);
 
       a img{
-        @include column(1/6, 0, 0);
       }
     }
   }
 
   .footer-logo {
-    @include column(1);
   }
 }

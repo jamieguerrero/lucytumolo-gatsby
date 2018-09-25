@@ -1,14 +1,12 @@
 nav .container.mobile {
   display: none;
   @media (max-width: $mobile-width) {
-    @include center;
     height: 100vh;
     background: url('/img/hero.jpg');
     background-size: cover;
     background-position-x: -350px;
 
     a.navbar-item img {
-      @include center;
       padding: $mobile-section-padding 0;
     }
   }

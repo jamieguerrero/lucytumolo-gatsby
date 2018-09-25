@@ -5,6 +5,7 @@ import Link from 'gatsby-link'
 import hero from '../img/hero-background.jpg'
 
 import HomePage from '../templates/home-page'
+import HomeNavbar from '../components/HomeNavbar'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -12,14 +13,14 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     const home = posts[0].node.frontmatter
     const parallaxImage = home.parallaxImage
-    console.log(parallaxImage)
     return (
       <div>
         <div className="container">
+          <HomeNavbar />
           <section className="hero-wrapper">
             <a href={home.ossingtonLink}>Ossington</a>
             <a href={home.dundasLink}>Dundas/Dufferin</a>
-            // TODO: Create hero image field
+            <img src={home.homeImage} alt=""/>
           </section>
           <section className="services-wrapper">
             <div className="text-on-image service-image">
@@ -30,8 +31,8 @@ export default class IndexPage extends React.Component {
               {home.servicesDescription}
               // TODO: make services description last sentence its own accent sentence field
             </div>
-            <div className="modalities">
-              <div className="modality">
+            <div className="modalities level">
+              <div className="modality level-item">
                 <div className="text-on-image">
                   <img src={home.modality1.image} alt=""/>
                   <h3 className="image-title">{home.modality1.title}</h3>
@@ -40,7 +41,7 @@ export default class IndexPage extends React.Component {
                   {home.modality1.description}
                 </div>
               </div>
-              <div className="modality">
+              <div className="modality level-item">
                 <div className="text-on-image">
                   <img src={home.modality2.image} alt=""/>
                   <h3 className="image-title">{home.modality2.title}</h3>
@@ -49,7 +50,7 @@ export default class IndexPage extends React.Component {
                   {home.modality2.description}
                 </div>
               </div>
-              <div className="modality">
+              <div className="modality level-item">
                 <div className="text-on-image">
                   <img src={home.modality3.image} alt=""/>
                   <h3 className="image-title">{home.modality3.title}</h3>
@@ -60,7 +61,10 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
           </section>
-          <section className="parallax-wrapper"></section>
+        </div>
+        <section className="parallax-wrapper"></section>
+        <div className="container">
+
           <section className="rates-wrapper">
             <div className="rates-description">
               {home.ratesDescription}

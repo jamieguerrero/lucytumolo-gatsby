@@ -5,6 +5,7 @@ import Content, { HTMLContent } from '../components/Content'
 export const HomePageTemplate = ({
   title,
   templateKey,
+  homeImage,
   ossingtonLink,
   dundasLink,
   servicesTitle,
@@ -16,53 +17,39 @@ export const HomePageTemplate = ({
   parallaxImage,
   ratesTitle,
   ratesImage,
-  ratesDescription,
+  ratesDescription
 }) => {
-  return (
-    <section className="section section--gradient">
-      <div className="container">
-        {title}
-        {templateKey}
-        {ossingtonLink}
-        {dundasLink}
-        {servicesTitle}
-        {servicesImage}
-        {servicesDescription}
-        {modality1.description}
-        {modality1.image}
-        {modality1.title}
-        {modality2.description}
-        {modality2.image}
-        {modality2.title}
-        {modality3.description}
-        {modality3.image}
-        {modality3.title}
-        {parallaxImage}
-        {ratesTitle}
-        {ratesImage}
-        {ratesDescription}
-      </div>
-    </section>
-  )
+  return (<div></div>)
 }
 
 HomePageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  aboutImage: PropTypes.string,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-  ossington: PropTypes.shape({
+  title : PropTypes.string.isRequired,
+  templateKey : PropTypes.string,
+  homeImage : PropTypes.string,
+  ossingtonLink : PropTypes.string,
+  dundasLink : PropTypes.string,
+  servicesTitle : PropTypes.string,
+  servicesImage : PropTypes.string,
+  servicesDescription : PropTypes.string,
+  modality1: PropTypes.shape({
+    description: PropTypes.string,
     image: PropTypes.string,
-    label: PropTypes.string,
-    locationDescription: PropTypes.string,
-    mapLink: PropTypes.string
+    title: PropTypes.string,
   }),
-  dundas: PropTypes.shape({
+  modality2: PropTypes.shape({
+    description: PropTypes.string,
     image: PropTypes.string,
-    label: PropTypes.string,
-    locationDescription: PropTypes.string,
-    mapLink: PropTypes.string
-  })
+    title: PropTypes.string,
+  }),
+  modality3: PropTypes.shape({
+    description: PropTypes.string,
+    image: PropTypes.string,
+    title: PropTypes.string,
+  }),
+  parallaxImage: PropTypes.string,
+  ratesTitle: PropTypes.string,
+  ratesImage: PropTypes.string,
+  ratesDescription: PropTypes.string
 }
 
 const HomePage = ({ data }) => {
@@ -89,6 +76,7 @@ query HomeQuery {
         frontmatter{
           title
           templateKey
+          homeImage
           ossingtonLink
           dundasLink
           servicesTitle

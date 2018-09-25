@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
+import Navbar from '../components/Navbar'
 
 export const ModalitiesPageTemplate = ({
   title,
@@ -11,13 +12,16 @@ export const ModalitiesPageTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        {title}
-        <img src={heroImage}/>
-        <PostContent content={content} />
-      </div>
-    </section>
+    <div>
+      <Navbar />
+      <section className="section section--gradient">
+        <div className="container">
+          {title}
+          <img src={heroImage}/>
+          <PostContent content={content} />
+        </div>
+      </section>
+    </div>
   )
 }
 

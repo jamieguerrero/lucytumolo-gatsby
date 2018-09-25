@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import blacklogo from '../img/lucy-logo-black.svg'
 import whitelogo from '../img/lucy-logo-white.svg'
 
-const Navbar = () => (
+const HomeNavbar = () => (
   <nav className="navbar">
     <div className="container mobile">
       <div className="navbar-brand">
@@ -75,4 +75,4 @@ const Navbar = () => (
   </nav>
 )
 
-export default Navbar
+export default HomeNavbar

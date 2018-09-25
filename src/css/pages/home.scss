@@ -3,34 +3,26 @@
 }
 
 .services-wrapper, .rates-wrapper {
-  padding-top: $desktop-section-padding;
 
   .service-image {
-    @include column(1/2, $offset: 0, $cycle: 0, $gutter: 0);
+
     @media (max-width: $tablet-width){
-      @include stack();
     }
   }
   .service-description {
-    @include column(2/5, .5/5, $cycle: 0, $gutter: 0)
     @media (max-width: $tablet-width){
-      @include stack();
     }
   }
 }
 
 .modalities {
-  @include center();
-  @include column(1);
   padding-top: $tablet-section-padding;
 
   .modality {
-    @include column(2.5/10, $offset: 0, $cycle: 0, $gutter: map-get($jeet, 'gutter'));
     text-align: center;
 
     // stack at tablet size
     @media (max-width: $tablet-width) {
-      @include stack();
     }
 
     .modality-description {
@@ -59,7 +51,6 @@
 }
 
 .rates-description {
-  @include column(2/5, 0, $cycle: 0, $gutter: 0);
   @media (max-width: $tablet-width){
     display: none;
   }
@@ -68,14 +59,11 @@
 .rates-description.mobile {
   display: none;
   @media (max-width: $tablet-width){
-    @include stack();
   }
 }
 
 .rates-image {
-  @include column(1/2, .5/5, $cycle: 0, $gutter: 0)
   @media (max-width: $tablet-width){
-    @include stack();
   }
 
 }

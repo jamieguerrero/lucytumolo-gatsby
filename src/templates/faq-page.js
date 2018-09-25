@@ -1,25 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Navbar from '../components/Navbar'
 
 export const FAQPageTemplate = ({
   title,
   faqs,
   faqNote
 }) => (
-  <section className="section section--gradient">
-    <div className="container">
-      {title}
-      {faqs.map((faq) => {
-        return (
-          <div>
-            {faq.question}
-            {faq.answer}
-          </div>
-        )
-      })}
-      {faqNote}
-    </div>
-  </section>
+  <div>
+    <Navbar />
+    <section className="section section--gradient">
+      <div className="container">
+        {title}
+        {faqs.map((faq) => {
+          return (
+            <div>
+              {faq.question}
+              {faq.answer}
+            </div>
+          )
+        })}
+        {faqNote}
+      </div>
+    </section>
+  </div>
 )
 
 FAQPageTemplate.propTypes = {

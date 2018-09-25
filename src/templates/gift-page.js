@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
+import Navbar from '../components/Navbar'
 
 export const GiftPageTemplate = ({
   title,
@@ -11,13 +12,16 @@ export const GiftPageTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        {title}
-        <img src={heroImage} alt=""/>
-        <PostContent content={content} />
-      </div>
-    </section>
+    <div>
+      <Navbar />
+      <section className="section section--gradient">
+        <div className="container">
+          {title}
+          <img src={heroImage} alt=""/>
+          <PostContent content={content} />
+        </div>
+      </section>
+    </div>
   )}
 
 GiftPageTemplate.propTypes = {

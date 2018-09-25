@@ -38,6 +38,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Home Image", name: "homeImage", widget: "image"}
           - {label: "Ossington Link", name: "ossingtonLink", widget: "string"}
           - {label: "Dundas Link", name: "dundasLink", widget: "string"}
           - {label: "Services Title", name: "servicesTitle", widget: "string"}

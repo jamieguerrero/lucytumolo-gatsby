@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
 import Testimonials from '../components/Testimonials'
+import Navbar from '../components/Navbar'
 
 export const TestimonialPageTemplate = ({
   title,
@@ -13,14 +14,17 @@ export const TestimonialPageTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        {title}
-        <img src={heroImage}/>
-        <PostContent content={content} />
-        <Testimonials testimonials={testimonials}/>
-      </div>
-    </section>
+    <div>
+      <Navbar />
+      <section className="section section--gradient">
+        <div className="container">
+          {title}
+          <img src={heroImage}/>
+          <PostContent content={content} />
+          <Testimonials testimonials={testimonials}/>
+        </div>
+      </section>
+    </div>
   )
 }
 
