@@ -1,5 +1,5 @@
 backend:
-  name: gitlab
+  name: gitlab!
   repo: jamieguerrero/lucytumolo-gatsby
   commit_messages:
     create: Create {{collection}} "{{slug}}"
