@@ -15,24 +15,26 @@ export default class IndexPage extends React.Component {
     const parallaxImage = home.parallaxImage
     return (
       <div>
-        <div className="container">
-          <HomeNavbar />
-          <section className="hero-wrapper">
-            <a href={home.ossingtonLink}>Ossington</a>
-            <a href={home.dundasLink}>Dundas/Dufferin</a>
-            <img src={home.homeImage} alt=""/>
+        <div className="sections-wrapper">
+          <section className="hero-wrapper" style={{backgroundImage: `url(${home.homeImage})`}}>
+            <HomeNavbar />
+            <div className="hero-locations">
+              <div className="location-box"><a href={home.ossingtonLink}>Ossington</a></div>
+              <div className="location-box"><a href={home.dundasLink}>Dundas/Dufferin</a></div>
+            </div>
           </section>
-          <section className="services-wrapper">
-            <div className="text-on-image service-image">
+          <section className="services-wrapper columns">
+            <div className="text-on-image service-image column is-5 is-offset-1">
               <img src={home.servicesImage} alt=""/>
               <h2 className="image-title">{home.servicesTitle}</h2>
             </div>
-            <div className="service-description">
+            <div className="service-description column is-4 is-offset-1 has-text-weight-semibold">
               {home.servicesDescription}
               // TODO: make services description last sentence its own accent sentence field
             </div>
-            <div className="modalities level">
-              <div className="modality level-item">
+          </section>
+          <section className="modalities-wrapper">
+              <div className="modality">
                 <div className="text-on-image">
                   <img src={home.modality1.image} alt=""/>
                   <h3 className="image-title">{home.modality1.title}</h3>
@@ -41,7 +43,7 @@ export default class IndexPage extends React.Component {
                   {home.modality1.description}
                 </div>
               </div>
-              <div className="modality level-item">
+              <div className="modality">
                 <div className="text-on-image">
                   <img src={home.modality2.image} alt=""/>
                   <h3 className="image-title">{home.modality2.title}</h3>
@@ -50,7 +52,7 @@ export default class IndexPage extends React.Component {
                   {home.modality2.description}
                 </div>
               </div>
-              <div className="modality level-item">
+              <div className="modality">
                 <div className="text-on-image">
                   <img src={home.modality3.image} alt=""/>
                   <h3 className="image-title">{home.modality3.title}</h3>
@@ -59,12 +61,10 @@ export default class IndexPage extends React.Component {
                   {home.modality3.description}
                 </div>
               </div>
-            </div>
           </section>
         </div>
         <section className="parallax-wrapper"></section>
-        <div className="container">
-
+        <div className="sections-wrapper">
           <section className="rates-wrapper">
             <div className="rates-description">
               {home.ratesDescription}
@@ -103,6 +103,7 @@ export const pageQuery = graphql`
           frontmatter{
             title
             templateKey
+            homeImage
             ossingtonLink
             dundasLink
             servicesTitle

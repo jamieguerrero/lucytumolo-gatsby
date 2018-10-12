@@ -5,69 +5,69 @@ import blacklogo from '../img/lucy-logo-black.svg'
 import whitelogo from '../img/lucy-logo-white.svg'
 
 const HomeNavbar = () => (
-  <nav className="navbar">
+  <nav>
     <div className="container mobile">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
+      <div>
+        <Link to="/">
           <img src={whitelogo} alt="Lucy Logo" style={{ width: '346px' }} />
         </Link>
       </div>
-      <ul className="navbar-items">
+      <ul>
         <li>
-          <Link className="navbar-item" to="/about">
+          <Link to="/about">
             About
           </Link>
         </li>
         <li>
-          <Link className="navbar-item" to="/testimonials">
+          <Link to="/testimonials">
             Testimonials
           </Link>
         </li>
         <li>
-          <Link className="navbar-item" to="/modalities">
+          <Link to="/modalities">
             Modalities
           </Link>
         </li>
         <li>
-          <Link className="navbar-item" to="/gift">
+          <Link to="/gift">
             Gift Certificates
           </Link>
         </li>
         <li>
-          <Link className="navbar-item" to="/faq">
+          <Link to="/faq">
             FAQ
           </Link>
         </li>
         <li>
-          <Link className="navbar-item" to="/contact">
+          <Link to="/contact">
             Contact
           </Link>
         </li><
       /ul>
     </div>
     <div className="container desktop">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <img src={blacklogo} alt="Lucy Logo" style={{ width: '346px' }} />
+      <div>
+        <Link to="/">
+          <img src={whitelogo} alt="Lucy Logo" style={{ width: '346px' }} />
         </Link>
       </div>
       <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
+        <Link to="/about">
           About
         </Link>
-        <Link className="navbar-item" to="/testimonials">
+        <Link to="/testimonials">
           Testimonials
         </Link>
-        <Link className="navbar-item" to="/modalities">
+        <Link to="/modalities">
           Modalities
         </Link>
-        <Link className="navbar-item" to="/gift">
+        <Link to="/gift">
           Gift Certificates
         </Link>
-        <Link className="navbar-item" to="/faq">
+        <Link to="/faq">
           FAQ
         </Link>
-        <Link className="navbar-item" to="/contact">
+        <Link to="/contact">
           Contact
         </Link>
       </div>

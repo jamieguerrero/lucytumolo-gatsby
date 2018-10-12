@@ -1,6 +1,5 @@
 @import '~bulma/bulma';
 @import '~tachyons-sass/tachyons.scss';
-@import '~jeet/scss/index';
 
 @import 'components/variables.scss';
 @import 'components/global.scss';
@@ -10,5 +9,6 @@
 @import 'pages/home';
 
 //Uncomment to show Jeet grid!
+@import '~jeet/scss/index';
 @include debug;
 // @import 'debug.scss'

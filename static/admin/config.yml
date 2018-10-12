@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: gitlab
   repo: jamieguerrero/lucytumolo-gatsby
 
 media_folder: static/img
