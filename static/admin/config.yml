@@ -3,6 +3,7 @@ backend:
   repo: lucytumolo/lucytumolo-gatsby
   auth_type: implicit # Required for implicit grant
   app_id: 25841ad99ce1c8a8fdf22898131e9ac245ac05cf73152137f7f3a1b2472cdcaa # Application ID from your GitLab settings
+  identity_url: "https://lucytumolo.gitlab.io/lucytumolo-gatsby/.netlify/identity"
   commit_messages:
     create: Create {{collection}} "{{slug}}"
     update: Update {{collection}} "{{slug}}"
