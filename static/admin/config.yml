@@ -8,8 +8,8 @@ backend:
     uploadMedia: Upload "{{path}}"
     deleteMedia: Delete "{{path}}"
 
-media_folder: ./lucytumolo-gatsby/static/img
-public_folder: ./lucytumolo-gatsby/img
+media_folder: ./static/img
+public_folder: ./img
 
 collections:
   - name: "blog"
