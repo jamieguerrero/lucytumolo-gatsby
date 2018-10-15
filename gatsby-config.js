@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: 'lucytumolo-gatsby',
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',
   },
