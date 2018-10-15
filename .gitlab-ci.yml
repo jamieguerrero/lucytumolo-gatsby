@@ -10,6 +10,7 @@ cache:
 pages:
   script:
   - yarn install
+  - npm install -g node-gyp
   - ./node_modules/.bin/gatsby build --prefix-paths
   artifacts:
     paths:
