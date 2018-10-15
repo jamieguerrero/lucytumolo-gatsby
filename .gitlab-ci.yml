@@ -9,7 +9,8 @@ cache:
 
 pages:
   script:
-  - yarn install
+  - npm install
+  - npm install gatsby-cli
   - ./node_modules/.bin/gatsby build --prefix-paths
   artifacts:
     paths:
