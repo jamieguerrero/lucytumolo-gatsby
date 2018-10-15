@@ -1,0 +1,2 @@
+webpackJsonp([0x6d118f7b49ba],{446:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Gatsby + Netlify CMS Starter"}},allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/blog/2017-01-04-just-in-small-batch-of-jamaican-blue-mountain-in-store-next-week/"},frontmatter:{title:"Just in: small batch of Jamaican Blue Mountain in store next week"}}}]}},pathContext:{tag:"green beans"}}}});
+//# sourceMappingURL=path---tags-green-beans-c84a0fbde86e03af9c32.js.map

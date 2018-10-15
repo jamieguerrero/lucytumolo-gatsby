@@ -1,0 +1,2 @@
+webpackJsonp([84887730282209],{437:function(e,s){e.exports={data:{markdownRemark:{frontmatter:{title:"Frequently Asked Questions",faqs:[{question:"Question 1",answer:"Answer 1"},{question:"Question 2",answer:"Answer 2"}],faqNote:"Test FAQ example 2"}}},pathContext:{id:"/Users/jamie/Documents/workspace/lucytumolo-gatsby/src/pages/faq/index.md absPath of file >>> MarkdownRemark"}}}});
+//# sourceMappingURL=path---faq-95920fc11c6340569c6d.js.map

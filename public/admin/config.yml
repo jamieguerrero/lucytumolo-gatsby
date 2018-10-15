@@ -1,0 +1,120 @@
+backend:
+  name: gitlab
+  repo: lucytumolo/lucytumolo-gatsby
+  auth_type: implicit # Required for implicit grant
+  app_id: 25841ad99ce1c8a8fdf22898131e9ac245ac05cf73152137f7f3a1b2472cdcaa # Application ID from your GitLab settings
+  commit_messages:
+    create: Create {{collection}} "{{slug}}"
+    update: Update {{collection}} "{{slug}}"
+    delete: Delete {{collection}} "{{slug}}"
+    uploadMedia: Upload "{{path}}"
+    deleteMedia: Delete "{{path}}"
+
+media_folder: ./static/img
+public_folder: ./img
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "About Image", name: "aboutImage", widget: "image"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "src/pages/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Testimonial Image", name: "testimonialImage", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Home Image", name: "homeImage", widget: "image"}
+          - {label: "Ossington Link", name: "ossingtonLink", widget: "string"}
+          - {label: "Dundas Link", name: "dundasLink", widget: "string"}
+          - {label: "Services Title", name: "servicesTitle", widget: "string"}
+          - {label: "Services Image", name: "servicesImage", widget: "image"}
+          - {label: "Services Description", name: "servicesDescription", widget: "markdown"}
+          - {label: "Modality 1", name: "modality1", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Image", name: "image", widget: "image"}, {label: "Description", name: "description", widget: "string"}]}
+          - {label: "Modality 2", name: "modality2", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Image", name: "image", widget: "image"}, {label: "Description", name: "description", widget: "string"}]}
+          - {label: "Modality 3", name: "modality3", widget: "object", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Image", name: "image", widget: "image"}, {label: "Description", name: "description", widget: "string"}]}
+          - {label: "Parallax Image", name: "parallaxImage", widget: "image"}
+          - {label: "Rates Title", name: "ratesTitle", widget: "string"}
+          - {label: "Rates Image", name: "ratesImage", widget: "image"}
+          - {label: "Rates Description", name: "ratesDescription", widget: "markdown"}
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "About Image", name: "aboutImage", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Ossington", name: "ossington", widget: "object", fields: [{label: "Title", name: "label", widget: "string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "string"}]}
+          - {label: "Dundas", name: "dundas", widget: "object", fields: [{label: "Title", name: "label", widget: "string"}, {label: "Image", name: "image", widget: image}, {label: "Map Link", name: "mapLink", widget: "string"}, {label: "Location Description", name: "locationDescription", widget: "string"}]}
+      - file: "src/pages/testimonials/index.md"
+        label: "Testimonials"
+        name: "testimonials"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "heroImage", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Testimonial Title", name: "testimonialTitle", widget: "string"}
+      - file: "src/pages/modalities/index.md"
+        label: "Modalities"
+        name: "modalities"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "modalities-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "heroImage", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/gift/index.md"
+        label: "Gift"
+        name: "gift"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "gift-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "heroImage", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/faq/index.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: "FAQs", name: "faqs", widget: "list", fields: [{label: "Question", name: "question", widget: "text"}, {label: "Answer", name: "answer", widget: "markdown"}]}
+          - {label: "FAQ Note", name: "faqNote", widget: "markdown"}
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: "Ossington Map", name: "ossingtonMap", widget: "object", fields: [{label: "Map Link", name: "mapLink", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
+          - {label: "Dundas Map", name: "dundasMap", widget: "object", fields: [{label: "Map Link", name: "mapLink", widget: "string"}, {label: "Address", name: "address", widget: "text"}, {label: "Schedule", name: "schedule", widget: "markdown"}, {label: "Notes", name: "notes", widget: "text"}]}
+          - {label: "Contact Section", name: "contactSection", widget: "object", fields: [{label: "Title", name: "title", widget:"string"}, {label: "Image", name: "image", widget: image}, {label: "Description", name: "description", widget: "markdown"}]}
+      - file: "src/pages/resources/index.md"
+        label: "Resources"
+        name: "resources"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "resources-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}

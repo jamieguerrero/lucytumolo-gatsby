@@ -1,0 +1,2 @@
+webpackJsonp([0xa0a3f3734aef],{442:function(e,a){e.exports={data:{markdownRemark:{html:"<p>Test</p>",frontmatter:{title:"Resources",heroImage:null}}},pathContext:{id:"/Users/jamie/Documents/workspace/lucytumolo-gatsby/src/pages/resources/index.md absPath of file >>> MarkdownRemark"}}}});
+//# sourceMappingURL=path---resources-19da05d41b505f7c75ce.js.map
