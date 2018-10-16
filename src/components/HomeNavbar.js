@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import blacklogo from '../img/lucy-logo-black.svg'
 import whitelogo from '../img/lucy-logo-white.svg'
 
 const HomeNavbar = () => (

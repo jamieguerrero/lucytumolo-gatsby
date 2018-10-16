@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import Link from 'gatsby-link'
 
 import hero from '../img/hero-background.jpg'
 
+
+import Layout from "../components/layout"
 import HomePage from '../templates/home-page'
 import HomeNavbar from '../components/HomeNavbar'
 
@@ -14,7 +17,7 @@ export default class IndexPage extends React.Component {
     const home = posts[0].node.frontmatter
     const parallaxImage = home.parallaxImage
     return (
-      <div>
+      <Layout>
         <div className="sections-wrapper">
           <section className="hero-wrapper" style={{backgroundImage: `url(${home.homeImage})`}}>
             <HomeNavbar />
@@ -81,7 +84,7 @@ export default class IndexPage extends React.Component {
           </section>
         </div>
         <div className="parallax-image" style={{backgroundImage: `url(${home.parallaxImage})`}}></div>
-      </div>
+      </Layout>
     )
   }
 }

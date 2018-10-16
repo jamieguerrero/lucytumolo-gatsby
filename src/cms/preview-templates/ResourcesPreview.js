@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ResourcesTemplate } from '../../templates/resources-page'
+import { ResourcePageTemplate } from '../../templates/resources-page'
 
 const ResourcesPreview = ({ entry, widgetFor }) => (
-  <ResourcesTemplate
+  <ResourcePageTemplate
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
   />

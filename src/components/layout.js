@@ -8,7 +8,7 @@ import '../css/index.scss'
 const TemplateWrapper = ({ children }) => (
   <div id="layout-wrapper" className="avenir">
     <Helmet title="Lucy Tumolo | Registered Massage Therapist" />
-    {children()}
+    {children}
     <Footer />
   </div>
 )
