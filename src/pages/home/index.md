@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 title: Home
-homeImage: /img/hero.jpg
+homeImage: /./img/toa-heftiba-578099-unsplash.jpg
 ossingtonLink: 'https://lucyrmt.janeapp.com/locations/ossington'
 dundasLink: 'https://lucyrmt.janeapp.com/locations/dundas-and-dufferin'
 servicesTitle: Services
