@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
 import logo from '../img/lucy-logo-black.svg'
 
@@ -36,7 +35,7 @@ const Footer = () => (
     </div>
 
     <div className="footer-logo">
-      <a href="#"><img src="../img/black-logo.svg" alt="Instagram"/></a>
+      <a href="#"><img src={logo} alt="Instagram"/></a>
     </div>
     </footer>
 )

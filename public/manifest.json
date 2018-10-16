@@ -4,7 +4,7 @@
   "main.css": "styles.css",
   "main.js": "render-page.js",
   "main.js.map": "render-page.js.map",
-  "static/hero-background.jpg": "static/hero-background.ca164463.jpg",
-  "static/lucy-logo-black.svg": "static/lucy-logo-black.219b25bb.svg",
-  "static/lucy-logo-white.svg": "static/lucy-logo-white.1563a01a.svg"
+  "static/hero-background.jpg": "static/hero-background-ca1644630de655b9af3a41b619c1e796.jpg",
+  "static/lucy-logo-black.svg": "static/lucy-logo-black-219b25bba6fab2dc9b2e05a2c79d88c1.svg",
+  "static/lucy-logo-white.svg": "static/lucy-logo-white-1563a01a7ff81ee37cd650c53137841f.svg"
 }
