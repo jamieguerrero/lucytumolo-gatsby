@@ -13,6 +13,6 @@ conversations. In addition, Lucy never stops working to improve her skills and
 to bring the best to her clients. I would never dream of going to anyone else
 for the massage.
 
-**Atsuko Kitayama**
+**Atsuko Kitayama!**
 
 Toronto, ON
